@@ -32,7 +32,7 @@ function ratesAverage(array) {
         }
     }
     if (avgSum != 0) {
-        return (Math.floor(avgSum/(array.length)*100)/100);
+        return (Math.round(avgSum/(array.length)*100)/100);
     }
     else return 0;
 }
@@ -52,7 +52,7 @@ function dramaMoviesRate(array) {
         }
     }
     if (avgSum != 0) {
-        return (Math.floor(avgSum/(drama.length)*100)/100);
+        return (Math.round(avgSum/(drama.length)*100)/100);
     }
     else return 0;
 }
