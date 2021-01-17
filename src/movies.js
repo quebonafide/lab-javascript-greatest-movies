@@ -64,7 +64,7 @@ function dramaMoviesRate(array) {
 
 
 function orderByYear (array) {
-    const clone = JSON.parse(JSON.stringify(utils.movies)); 
+    const clone = JSON.parse(JSON.stringify(array)); 
     clone.sort((a, b) => {
         if (a.year > b.year) {
             return 1;
@@ -82,7 +82,7 @@ function orderByYear (array) {
 
 
 console.log(Array.isArray(orderByYear(utils.movies)));     //I return an array but jasmine is still unhappy, I'm beginning to think she is out to get me
-
+console.log(typeof orderByYear(utils.movies));
 // Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
