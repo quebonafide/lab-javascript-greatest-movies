@@ -80,10 +80,26 @@ function orderByYear (array) {
     return clone;
 }
 
+   
+// console.log(typeof orderByYear(utils.movies));
 
-console.log(Array.isArray(orderByYear(utils.movies)));     //I return an array but jasmine is still unhappy, I'm beginning to think she is out to get me
-console.log(typeof orderByYear(utils.movies));
 // Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
+
+function orderAlphabetically(array1) {  // seems to work but doesn't
+    const clone1 = JSON.parse(JSON.stringify(array1)); 
+    clone1.sort((a, b) => {
+        if (a.title > b.title) {
+            return 1;
+        }
+        else return -1;
+    })
+    let titleArray = [];
+    for (i=0; i < 20 ; i++) {
+        titleArray.push(clone1[i].title)
+    }
+    return titleArray;
+} 
+console.log(orderAlphabetically(utils.movies))
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
 
