@@ -93,13 +93,17 @@ function orderAlphabetically(array1) {  // seems to work but doesn't
         }
         else return -1;
     })
-    let titleArray = [];
-    for (i=0; i < 20 ; i++) {
-        titleArray.push(clone1[i].title)
+    let titleArray = []; 
+    for (i=0; i <= 19 ; i++) {
+        if (typeof clone1[i] != 'undefined') {
+            titleArray.push(clone1[i].title)
+        }
     }
     return titleArray;
-} 
-console.log(orderAlphabetically(utils.movies))
+}
+
+
+ console.log(orderAlphabetically(utils.movies))
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
 
